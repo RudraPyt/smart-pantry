@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5000/api";
+const BASE_URL = "https://smart-pantry-backend-ok63.onrender.com";
 
 // Barcode scan
 async function scanBarcode() {
