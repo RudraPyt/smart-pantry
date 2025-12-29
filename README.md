@@ -2,7 +2,7 @@
 
 Smart Pantry is a full-stack web application that helps users **track grocery expiry dates**, **reduce food waste**, and **cook smarter** using **AI-powered suggestions**.
 
-Built as a **hackathon-ready project**, it combines real-world utility with modern web technologies.
+It combines real-world utility with modern web technologies.
 
 ---
 
