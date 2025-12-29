@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Pantry – Expiry Alerter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="loadExpiring()">
+
+    <header class="hero">
+        <h1>🧺 Smart Pantry</h1>
+        <p>Never waste food. Cook smarter with AI.</p>
+        <button id="themeToggle" onclick="toggleTheme()">🌙 Dark Mode</button>
+    </header>
+
+    <div class="container">
+
+        <section class="card">
+            <h2>Add Grocery Item</h2>
+
+            <input type="text" id="barcode" placeholder="Enter barcode (optional)">
+            <button onclick="scanBarcode()">Read Barcode</button>
+            <input type="file" id="barcodeImage" accept="image/*">
+            <button onclick="scanBarcodeImage()">Scan Barcode from Image</button>
+
+
+            <input type="text" id="name" placeholder="Item name">
+            <input type="text" id="brand" placeholder="Brand">
+            <input type="date" id="expiry">
+            <input type="number" id="qty" placeholder="Quantity">
+
+            <button onclick="addItem()">Add to Pantry</button>
+            <p id="statusMsg"></p>
+        </section>
+
+        <section class="card">
+            <h2>⏰ Expiring Soon</h2>
+            <ul id="expiringList"></ul>
+        </section>
+
+        <section class="card">
+            <h2>🍳 Recipe Suggestions</h2>
+            <button onclick="getRecipes()">Suggest Recipes</button>
+            <div id="recipes"></div>
+        </section>
+
+        <section class="card">
+            <h2>🤖 AI Cooking Assistant</h2>
+            <textarea id="aiPrompt" placeholder="Ask something like: What can I cook with rice and onion?"></textarea>
+            <button onclick="askAI()">Ask AI</button>
+            <div class="ai-box" id="aiResponse"></div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

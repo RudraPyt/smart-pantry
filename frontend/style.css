@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+    transition: background 0.3s;
+}
+
+.hero {
+    background: linear-gradient(135deg, #2e7d32, #66bb6a);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+}
+
+#themeToggle {
+    margin-top: 15px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 14px;
+    padding: 22px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 25px rgb(115, 13, 188);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(135deg, #43a047, #2e7d32);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #fff3cd;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 6px;
+}
+
+#recipes p {
+    background: #e8f5e9;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.ai-box {
+    background: #f5f5f5;
+    border-left: 5px solid #66bb6a;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+body.dark {
+    background: #121212;
+    color: #e0e0e0;
+}
+
+body.dark .hero {
+    background: #1b5e20;
+}
+
+body.dark .card {
+    background: #1f1f1f;
+}
+
+body.dark input,
+body.dark textarea {
+    background: #2b2b2b;
+    color: white;
+}
