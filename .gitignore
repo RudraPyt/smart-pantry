@@ -1,6 +1,7 @@
 .env
 node_modules/
 vision-key.json
+api_keys.docx
 uploads/
 .DS_Store
 Thumbs.db
