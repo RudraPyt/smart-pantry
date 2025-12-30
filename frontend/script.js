@@ -10,7 +10,7 @@ async function scanBarcode() {
     }
 
     try {
-        const res = await fetch(`http://localhost:5000/api/barcode/${code}`);
+        const res = await fetch(`https://smart-pantry-backend-ok63.onrender.com/api/barcode/${code}`);
         const data = await res.json();
 
         if (data.error) {
@@ -37,7 +37,7 @@ async function addItem() {
     };
 
     try {
-        await fetch("http://localhost:5000/api/pantry", {
+        await fetch("https://smart-pantry-backend-ok63.onrender.com/api/pantry", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(item)
@@ -58,7 +58,7 @@ async function addItem() {
 
 // Recipe suggestions
 async function getRecipes() {
-    const res = await fetch("http://localhost:5000/api/expiring");
+    const res = await fetch("https://smart-pantry-backend-ok63.onrender.com/api/expiring");
     const items = await res.json();
 
     let ingredients = items.map(i => i.name).join(",");
@@ -69,7 +69,7 @@ async function getRecipes() {
     }
 
     const recipeRes = await fetch(
-        `http://localhost:5000/api/recipes?ingredients=${ingredients}`
+        `https://smart-pantry-backend-ok63.onrender.com/api/recipes?ingredients=${ingredients}`
     );
 
     const recipes = await recipeRes.json();
@@ -90,7 +90,7 @@ async function askAI() {
 
     box.textContent = "Thinking... 🤖";
 
-    const res = await fetch("http://localhost:5000/api/ai", {
+    const res = await fetch("https://smart-pantry-backend-ok63.onrender.com/api/ai", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ prompt })
@@ -116,7 +116,7 @@ function toggleTheme() {
 loadExpiring();
 
 async function loadExpiring() {
-    const res = await fetch("http://localhost:5000/api/expiring");
+    const res = await fetch("https://smart-pantry-backend-ok63.onrender.com/api/expiring");
     const items = await res.json();
 
     const list = document.getElementById("expiringList");
