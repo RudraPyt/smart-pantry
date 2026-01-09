@@ -58,12 +58,11 @@ async function addItem() {
 
 // Recipe suggestions
 async function getRecipes() {
-    const res = await fetch("https://smart-pantry-backend-ok63.onrender.com/api/expiring");
+    const res = await fetch(`https://smart-pantry-backend-ok63.onrender.com/api/expiring`);
     const items = await res.json();
 
     let ingredients = items.map(i => i.name).join(",");
 
-    // Fallback if no expiring items
     if (!ingredients) {
         ingredients = "rice,onion";
     }
@@ -77,10 +76,19 @@ async function getRecipes() {
     const container = document.getElementById("recipes");
     container.innerHTML = "";
 
+    // ✅ SAFETY CHECK
+    if (!Array.isArray(recipes)) {
+        container.innerHTML =
+            "❌ Recipe service unavailable. Please try later.";
+        console.error("Recipe API error:", recipes);
+        return;
+    }
+
     recipes.forEach(r => {
         container.innerHTML += `<p>🍽️ ${r.title}</p>`;
     });
 }
+
 
 
 // Ask AI assistant

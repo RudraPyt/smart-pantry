@@ -121,12 +121,24 @@ app.get("/api/expiring", (req, res) => {
 
 // Recipes
 app.get("/api/recipes", async (req, res) => {
-    const ingredients = req.query.ingredients;
-    const url = `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingredients}&apiKey=${process.env.SPOON_API}`;
-    const response = await fetch(url);
-    const data = await response.json();
-    res.json(data);
+    try {
+        const ingredients = req.query.ingredients;
+        const url = `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingredients}&apiKey=${process.env.SPOON_API_KEY}`;
+
+        const response = await fetch(url);
+        const data = await response.json();
+
+        if (!Array.isArray(data)) {
+            return res.status(500).json([]);
+        }
+
+        res.json(data);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json([]);
+    }
 });
+
 
 // Open AI (FINAL FIXED VERSION)
 const openai = new OpenAI({
