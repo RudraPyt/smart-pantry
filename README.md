@@ -51,9 +51,7 @@ The goal is simple: **waste less food, save money, and cook smarter** 🍽️
 
 ---
 
-***🏆 Why This Is a Strong Hackathon Project***
-
-Smart Pantry is a strong hackathon-ready project because it focuses on solving a real-world, everyday problem—food waste due to forgotten expiry dates—using a practical and scalable technical approach.
+***🏆Features***
 
 *🔹 Real-World Impact*
 
@@ -94,16 +92,3 @@ The architecture is designed in a way that can be easily extended with:
 Mobile support
 This makes it suitable not just as a prototype, but as a potential real product.
 
-*🔹 Hackathon-Ready Balance*
-
-The project balances:
-
-• Innovation ✨
-
-• Practicality 🛠️
-
-• Technical depth ⚙️
-
-• Clean UI & user experience 🎨
-
-All of this makes Smart Pantry a well-rounded and competitive hackathon project.
